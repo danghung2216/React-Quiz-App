@@ -1,0 +1,255 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* background-color: rgba(165, 180, 252); */
+  background-image: url("./nen.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
+  min-height: 110vh;
+  width: 100%;
+}
+.container-start {
+  text-align: center;
+  padding-top: 20px;
+  /* background-image: url("./nen.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  width: 100%;
+  height: 100%;
+}
+
+.container-start h1 {
+  color: #fff;
+}
+
+.container-start button {
+  color: black;
+  padding: 12px 50px;
+  background: #6ee7b7;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.container-quiz {
+  padding-top: 10px;
+  text-align: center;
+}
+.container-button {
+  padding-top: 20px;
+}
+.container-button p {
+  color: rgb(79, 70, 229);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button-previous-default {
+  background-color: #e4d9d9;
+  color: #7165657d;
+  padding: 12px 50px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.button-previous {
+  color: #fff;
+  padding: 12px 50px;
+  background-color: rgb(151, 126, 126);
+  border: none;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+.button-next-default {
+  color: #333;
+  padding: 12px 50px;
+  background-color: rgb(96, 182, 149);
+  border: none;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.button-next {
+  color: #d1d5d8;
+  padding: 12px 50px;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.button-submit {
+  color: #fff;
+  padding: 12px 50px;
+  background-color: orange;
+  border: none;
+  border-radius: 8px;
+}
+
+.container-question {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 200px;
+  background-color: #fff;
+  min-width: 800px;
+  min-height: 200px;
+}
+
+.container-question p {
+  font-weight: bold;
+}
+
+.question {
+  color: aqua;
+  padding-top: 20px;
+  font-size: 18px;
+}
+.title-question {
+  font-size: 20px;
+  padding-top: 15px;
+}
+.container-list-question {
+  margin: 0 auto;
+  margin-top: 50px;
+
+  max-width: 600px;
+}
+.container-list-question ul {
+  border-radius: 10px;
+}
+.container-list-question li {
+  background-color: #fff;
+  list-style: none;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: -15px;
+  border-radius: 10px;
+}
+
+.container-list-question li:hover {
+  background-color: #312e81;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-bottom: -17px;
+}
+
+.test {
+  background-color: red;
+}
+
+.container-end {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.container-end h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0px;
+  z-index: 9;
+  margin-top: 70px;
+}
+
+.container {
+  position: relative;
+  transform: scale(50%);
+  background-color: #fff;
+  border-radius: 99999px;
+}
+.text {
+  position: absolute;
+  color: rgb(79, 70, 229);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 36px;
+}
+.container svg {
+  width: 150px;
+  height: 150px;
+  /* background-color: red; */
+  transform: rotate(-90deg);
+}
+
+.container svg circle {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4;
+  transform: translate(5px, 5px);
+  transition: all 2s;
+  z-index: 0;
+}
+
+.container svg circle:nth-child(2) {
+  fill: transparent;
+  stroke: rgb(79, 70, 229);
+  stroke-width: 10;
+  stroke-dasharray: 440;
+  /* stroke-dashoffset: 0; */
+  transition: all 0.1s;
+}
+
+.dot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 128, 0, 0.281); */
+  transition: all 0.1s;
+  z-index: 9999;
+}
