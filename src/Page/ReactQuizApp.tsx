@@ -2,18 +2,16 @@ import { useEffect, useState } from "react";
 import "../App.css";
 import CountdownTimer from "./Counter";
 
-interface Answer {
+interface IAnssew {
   answer_content: string;
   correct: boolean;
 }
-
-interface Question {
-  id: number;
+interface IQuestionData {
+  id: string;
   question_content: string;
-  answers: Answer[];
+  answers: IAnssew[];
 }
-
-const QuestionData = [
+const QuestionData: IQuestionData[] = [
   {
     id: "1",
     question_content: "React is mainly used for building ___.",
@@ -116,8 +114,8 @@ const QuestionData = [
 function QuizReactApp(): JSX.Element {
   const [isReviewMode, setIsReviewMode] = useState<boolean>(true);
   const [quizStarted, setQuizStarted] = useState<boolean>(false);
-  const [quizData, setQuizData] = useState<Question[]>([]);
-  const [prevQuizData, setprevQuizData] = useState<Question[]>([]);
+  const [quizData, setQuizData] = useState<IQuestionData[]>([]);
+  const [prevQuizData, setprevQuizData] = useState<IQuestionData[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [isTimerExpired, setIsTimerExpired] = useState<boolean>(false);
   const [selectedAnswerIndexes, setSelectedAnswerIndexes] = useState<number[]>(
